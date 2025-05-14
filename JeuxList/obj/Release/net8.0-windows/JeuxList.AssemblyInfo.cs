@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("BiblioTests")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("JeuxList")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4514e7e879161a807e4cc0f74d063dc6052644cc")]
-[assembly: System.Reflection.AssemblyProductAttribute("BiblioTests")]
-[assembly: System.Reflection.AssemblyTitleAttribute("BiblioTests")]
+[assembly: System.Reflection.AssemblyProductAttribute("JeuxList")]
+[assembly: System.Reflection.AssemblyTitleAttribute("JeuxList")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

@@ -4119,11 +4119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj",
+      "projectUniqueName": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj",
       "projectName": "JeuxList",
-      "projectPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj",
+      "projectPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj",
       "packagesPath": "C:\\Users\\mleda\\.nuget\\packages\\",
-      "outputPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\obj\\",
+      "outputPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

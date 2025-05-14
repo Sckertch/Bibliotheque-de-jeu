@@ -42,6 +42,7 @@ namespace JeuxList
                             int status = reader.GetInt32("Role");
                             int modif = reader.GetInt32("modif");
 
+                            // modif détermine si le mot de passe a été modifié afin de redirigé l'utilisateur vers la page de modification de mot de passe
                             if (modif == 1)
                             {
                                 status = 3;
