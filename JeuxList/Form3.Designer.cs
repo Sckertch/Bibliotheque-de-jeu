@@ -118,7 +118,6 @@
             Controls.Add(ListBoxGames);
             Name = "Form3";
             Text = "Form3";
-            Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)ListBoxGames).EndInit();
             ResumeLayout(false);
             PerformLayout();

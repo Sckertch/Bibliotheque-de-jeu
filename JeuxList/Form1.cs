@@ -32,7 +32,7 @@ namespace JeuxList
                     // Cacher le formulaire Form1 au lieu de le fermer
                     this.Hide();
 
-                    // Instancier le formulaire Form2
+                    // Instancier la vue administrateur
                     Form3 form3 = new Form3(this, result.name, conn);
 
                     // Afficher le formulaire Form2
@@ -45,10 +45,8 @@ namespace JeuxList
                     passChange.Show();
                     break;
                 default:
-                    // Instancier le formulaire Form2
-                    Form2 form2 = new Form2(this, result.name);
-
-                    // Afficher le formulaire Form2
+                    // Instancier la vue utilisateur
+                    Form2 form2 = new Form2(this, result.name, conn);
                     form2.Show();
 
                     // Cacher le formulaire Form1 au lieu de le fermer
@@ -62,11 +60,6 @@ namespace JeuxList
         {
             textBox1.Text = "";
             textBox2.Text = "";
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

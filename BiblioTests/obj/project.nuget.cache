@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3u6QKbDQvjw=",
+  "dgSpecHash": "4k2oYeb9YCk=",
   "success": true,
-  "projectFilePath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\BiblioTests.csproj",
+  "projectFilePath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\BiblioTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mleda\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mleda\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

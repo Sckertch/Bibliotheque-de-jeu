@@ -42,6 +42,7 @@ namespace JeuxList
                             int status = reader.GetInt32("Role");
                             int modif = reader.GetInt32("modif");
 
+                            // modif détermine si le mot de passe a été modifié afin de redirigé l'utilisateur vers la page de modification de mot de passe
                             if (modif == 1)
                             {
                                 status = 3;
@@ -55,69 +56,6 @@ namespace JeuxList
             }
 
             return new UserCheck("null", 0);
-        }
-
-        // Fonction qui verifie si un utilisateur avec le meme Username existe
-        public bool checkUser(User user, DatabaseConnection dbConnection)
-        {
-            string query = "SELECT * FROM users WHERE Username = @nom";
-            using (MySqlConnection connection = dbConnection.GetConnection())
-            {
-                dbConnection.OpenConnection(connection);
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@nom", user.Nom);
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            return true;
-                        }
-                    }
-                }
-                dbConnection.CloseConnection(connection);
-            }
-            return false;
-        }
-
-        // fonction qui ajoute un utilisateur a la bdd
-        public bool addUser(User user, string role, DatabaseConnection dbConnection)
-        {
-            switch (role)
-            {
-                case "Admin":
-                    role = "1";
-                    break;
-                case "Utilisateur":
-                    role = "2";
-                    break;
-            }
-
-            string newMdp = User.GeneratePassword();
-
-            try
-            {
-                string query = "INSERT INTO users (Username, PasswordHash, Role, modif) VALUES (@nom, @mdp, @role, @modif)";
-                using (MySqlConnection connection = dbConnection.GetConnection())
-                {
-                    dbConnection.OpenConnection(connection);
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@nom", user.Nom);
-                        command.Parameters.AddWithValue("@mdp", User.HashPassword(newMdp));
-                        command.Parameters.AddWithValue("@role", role);
-                        command.Parameters.AddWithValue("@modif", 1);
-                        command.ExecuteNonQuery();
-                    }
-                    dbConnection.CloseConnection(connection);
-                }
-                MessageBox.Show("Le mot de passe de l'utilisateur est : " + newMdp);
-                return true;
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
         }
     }
 }

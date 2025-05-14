@@ -6,20 +6,22 @@ namespace JeuxList
 {
     public partial class Form2 : Form
     {
-        private DatabaseConnection dbConnection = new DatabaseConnection();
+        private DatabaseConnection dbConnection;
         private Form1 form1;
         private string connectUser;
-        private Dictionary<string, int> gameDictionary = new Dictionary<string, int>();
 
-        public Form2(Form1 form1, string connectUser)
+
+        public Form2(Form1 form1, string connectUser, DatabaseConnection dbConnection)
         {
+            ;
+            this.form1 = form1;
+            this.connectUser = connectUser;
+            this.dbConnection = dbConnection;
             InitializeComponent();
             InitializeDataGridView();
             LoadDataGridView();
-            this.form1 = form1;
-            this.connectUser = connectUser;
+            Connect.Text = "Connecté en tant que " + this.connectUser;
 
-            addCart.Enabled = false;
         }
 
         private void InitializeDataGridView()
@@ -42,8 +44,6 @@ namespace JeuxList
             ListBoxGames.Columns["Title"].Width = 250;
             ListBoxGames.Columns["Description"].Width = 450; // Ajustez la largeur selon vos besoins
             ListBoxGames.Columns["CategoryName"].Width = 150;
-
-            ListBoxGames.SelectionChanged += ListBoxGames_SelectionChanged;
         }
 
 
@@ -59,36 +59,31 @@ namespace JeuxList
                 ListBoxGames.Rows.Add(game.Title, game.Description, game.CategoryName, game.Quantity, game.NbJoueur, game.Age, game.Duree + " min", "✏️", game.GameId);
         }
 
-        private void ListBoxGames_SelectionChanged(object sender, EventArgs e)
+        private void decon_Click_1(object sender, EventArgs e)
         {
-            // Activer le bouton addCart si une ligne est sélectionnée
-            addCart.Enabled = ListBoxGames.SelectedRows.Count > 0;
-        }
-        private void addCart_Click(object sender, EventArgs e)
-        {
-            if (ListBoxGames.SelectedRows.Count > 0)
+            foreach (Form form in Application.OpenForms)
             {
-                string gameName = ListBoxGames.SelectedRows[0].Cells["Title"].Value.ToString();
-                if (gameDictionary.ContainsKey(gameName))
+                if (form != this && form.Owner == this)
                 {
-                    gameDictionary[gameName]++;
-                }
-                else
-                {
-                    gameDictionary[gameName] = 1;
+                    form.Close();
                 }
             }
-
-            MessageBox.Show("Le jeu a été ajouté au panier" + gameDictionary);
+            this.form1.ResetValues();
+            this.form1.Show(); // Afficher Form1 avant de fermer Form3
+            this.Close(); // Fermer Form3
         }
 
-        private void ListBoxGames_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void recherche_TextChanged_1(object sender, EventArgs e)
         {
+            string keyword = recherche.Text;
+            List<Game> games = Game.GetGames(this.dbConnection, keyword);
 
-        }
+            // Effacer les éléments existants dans le DataGridView
+            ListBoxGames.Rows.Clear();
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
+            // Ajouter les résultats au DataGridView
+            foreach (Game game in games)
+                ListBoxGames.Rows.Add(game.Title, game.Description, game.CategoryName, game.Quantity, game.NbJoueur, game.Age, game.Duree, "✏️", game.GameId);
 
         }
     }

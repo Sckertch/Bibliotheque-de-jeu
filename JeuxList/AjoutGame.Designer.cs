@@ -110,7 +110,6 @@
             categorie.Name = "categorie";
             categorie.Size = new Size(219, 28);
             categorie.TabIndex = 8;
-            categorie.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label4
             // 
@@ -135,7 +134,6 @@
             quantite.Name = "quantite";
             quantite.Size = new Size(193, 27);
             quantite.TabIndex = 11;
-            quantite.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // nbj
             // 
@@ -208,7 +206,6 @@
             Controls.Add(ajouter);
             Name = "AjoutGame";
             Text = "Ajout";
-            Load += Ajout_Load;
             ((System.ComponentModel.ISupportInitialize)quantite).EndInit();
             ((System.ComponentModel.ISupportInitialize)age).EndInit();
             ((System.ComponentModel.ISupportInitialize)duree).EndInit();

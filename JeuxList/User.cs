@@ -9,19 +9,17 @@ namespace JeuxList
         public string Nom { get; set; }
         public int? UserId { get; set; }
 
-        public int? UserBorrow { get; set; }
 
-        public User(string nom, int? userId = null, int? userBorrow = null)
+        public User(string nom, int? userId = null)
         {
             Nom = nom;
             UserId = userId;
-            UserBorrow = userBorrow;
         }
 
         public static List<User> GetUsers(DatabaseConnection dbConnection)
         {
             List<User> users = new List<User>();
-            string query = "SELECT u.Username, u.UserID, COUNT(b.BorrowingID) AS BorrowCount FROM users u LEFT JOIN borrowing b ON u.UserID = b.UserID GROUP BY u.Username, u.UserID;";
+            string query = "SELECT u.Username, u.UserID FROM users u GROUP BY u.Username, u.UserID;";
             using (MySqlConnection connection = dbConnection.GetConnection())
             {
                 dbConnection.OpenConnection(connection);
@@ -33,8 +31,7 @@ namespace JeuxList
                         {
                             User user = new User(
                                 reader.GetString("Username"),
-                                reader.GetInt32("UserID"),
-                                reader.GetInt32("BorrowCount")
+                                reader.GetInt32("UserID")
                             );
                             users.Add(user);
                         }
@@ -93,6 +90,69 @@ namespace JeuxList
                 return false;
 
             }
+        }
+
+        // fonction qui ajoute un utilisateur a la bdd
+        public static bool AddUser(User user, string role, DatabaseConnection dbConnection)
+        {
+            switch (role)
+            {
+                case "Admin":
+                    role = "1";
+                    break;
+                case "Utilisateur":
+                    role = "2";
+                    break;
+            }
+
+            string newMdp = User.GeneratePassword();
+
+            try
+            {
+                string query = "INSERT INTO users (Username, PasswordHash, Role, modif) VALUES (@nom, @mdp, @role, @modif)";
+                using (MySqlConnection connection = dbConnection.GetConnection())
+                {
+                    dbConnection.OpenConnection(connection);
+                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@nom", user.Nom);
+                        command.Parameters.AddWithValue("@mdp", User.HashPassword(newMdp));
+                        command.Parameters.AddWithValue("@role", role);
+                        command.Parameters.AddWithValue("@modif", 1);
+                        command.ExecuteNonQuery();
+                    }
+                    dbConnection.CloseConnection(connection);
+                }
+                MessageBox.Show("Le mot de passe de l'utilisateur est : " + newMdp);
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        // Fonction qui verifie si un utilisateur avec le meme Username existe
+        public static bool CheckUser(User user, DatabaseConnection dbConnection)
+        {
+            string query = "SELECT * FROM users WHERE Username = @nom";
+            using (MySqlConnection connection = dbConnection.GetConnection())
+            {
+                dbConnection.OpenConnection(connection);
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@nom", user.Nom);
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return true;
+                        }
+                    }
+                }
+                dbConnection.CloseConnection(connection);
+            }
+            return false;
         }
     }
 }

@@ -112,7 +112,6 @@
             label2.Size = new Size(91, 20);
             label2.TabIndex = 18;
             label2.Text = "Durée (min):";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -164,7 +163,6 @@
             Controls.Add(modifNom);
             Name = "EditGameForm";
             Text = "ch";
-            Load += EditGameForm_Load;
             ((System.ComponentModel.ISupportInitialize)modifQuant).EndInit();
             ((System.ComponentModel.ISupportInitialize)duree).EndInit();
             ((System.ComponentModel.ISupportInitialize)age).EndInit();

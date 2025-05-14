@@ -21,13 +21,6 @@ namespace JeuxList
             InitializeComponent();
         }
 
-
-
-        private void PassChange_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private bool checkSamePassWord(string a, string b)
         {
             if (a == b)

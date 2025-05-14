@@ -41,12 +41,6 @@ namespace JeuxList
             List<string> categories = Game.GetCategories(dbConnection);
             modifCat.DataSource = categories;
         }
-
-        private void EditGameForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEnreg_Click(object sender, EventArgs e)
         {
             string name = modifNom.Text;
@@ -60,7 +54,7 @@ namespace JeuxList
 
             Game game = new Game(name, description, categegorie, quantity, nbJoueur, age, duree, id);
 
-            bool success = GameCheck.UpdateGame(game, this.dbConnection); ///
+            bool success = Game.UpdateGame(game, this.dbConnection); ///
 
             if (success)
             {
@@ -77,11 +71,6 @@ namespace JeuxList
         private void retour_Click(object sender, EventArgs e)
         {
             this.Close(); // Fermer Form3
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

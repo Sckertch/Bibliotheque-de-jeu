@@ -16,7 +16,7 @@
             InitializeComponent();
             InitializeDataGridView();
             Connect.Text = "Connecté en tant que " + this.connectUser;
-            
+
 
         }
 
@@ -91,11 +91,6 @@
 
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AjoutGame ajout = new AjoutGame(this, this.btnEdit);
@@ -160,6 +155,5 @@
 
             useredit.Show();
         }
-
     }
 }

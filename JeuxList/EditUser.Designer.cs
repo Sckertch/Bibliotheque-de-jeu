@@ -80,7 +80,6 @@
             Controls.Add(userGrid);
             Name = "EditUser";
             Text = "EditUser";
-            Load += EditUser_Load;
             ((System.ComponentModel.ISupportInitialize)userGrid).EndInit();
             ResumeLayout(false);
         }

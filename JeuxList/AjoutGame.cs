@@ -31,11 +31,6 @@ namespace JeuxList
             categorie.SelectedIndex = 0;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string name = titre.Text;
@@ -49,11 +44,10 @@ namespace JeuxList
 
             DatabaseConnection conn = new DatabaseConnection();
             Game game = new Game(name, description, categorie, quantity, nbJoueur, age, duree);
-            GameCheck check = new GameCheck();
 
-            if (check.CheckGame(game))
+            if (Game.CheckGame(game))
             {
-                if (GameCheck.AddGame(game, conn))
+                if (Game.AddGame(game, conn))
                 {
                     MessageBox.Show("Jeu ajouté avec succès");
                     this.form3.LoadDataGridView(this.btnEdit);
@@ -72,23 +66,6 @@ namespace JeuxList
             }
 
         }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ajout_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close(); // Fermer Form3

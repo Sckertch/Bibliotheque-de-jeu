@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\BiblioTests.csproj": {}
+    "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\BiblioTests.csproj": {}
   },
   "projects": {
-    "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\BiblioTests.csproj": {
+    "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\BiblioTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\BiblioTests.csproj",
+        "projectUniqueName": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\BiblioTests.csproj",
         "projectName": "BiblioTests",
-        "projectPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\BiblioTests.csproj",
+        "projectPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\BiblioTests.csproj",
         "packagesPath": "C:\\Users\\mleda\\.nuget\\packages\\",
-        "outputPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\BiblioTests\\obj\\",
+        "outputPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\BiblioTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0-windows7.0": {
             "targetAlias": "net8.0-windows",
             "projectReferences": {
-              "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj": {
-                "projectPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj"
+              "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj": {
+                "projectPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj"
               }
             }
           }
@@ -95,14 +95,14 @@
         }
       }
     },
-    "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj": {
+    "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj",
+        "projectUniqueName": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj",
         "projectName": "JeuxList",
-        "projectPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\JeuxList.csproj",
+        "projectPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\JeuxList.csproj",
         "packagesPath": "C:\\Users\\mleda\\.nuget\\packages\\",
-        "outputPath": "D:\\BTS_SIO\\SIO\\SLAM\\Dev\\AP\\Jeux\\JeuxList\\JeuxList\\obj\\",
+        "outputPath": "C:\\Users\\mleda\\source\\repos\\Sckertch\\Bibliotheque-de-jeu\\JeuxList\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
