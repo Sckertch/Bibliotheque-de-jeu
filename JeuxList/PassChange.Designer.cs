@@ -89,7 +89,6 @@
             Controls.Add(textBox1);
             Name = "PassChange";
             Text = "PassChange";
-            Load += PassChange_Load;
             ResumeLayout(false);
             PerformLayout();
         }

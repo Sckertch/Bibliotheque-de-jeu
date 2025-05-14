@@ -50,7 +50,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(125, 27);
             textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -103,7 +102,6 @@
             Controls.Add(comboBox1);
             Name = "AjoutUser";
             Text = "AjoutUser";
-            Load += AjoutUser_Load;
             ResumeLayout(false);
             PerformLayout();
         }

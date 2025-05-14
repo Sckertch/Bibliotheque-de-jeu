@@ -91,11 +91,6 @@
 
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             AjoutGame ajout = new AjoutGame(this, this.btnEdit);
@@ -159,11 +154,6 @@
             EditUser useredit = new EditUser();
 
             useredit.Show();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
