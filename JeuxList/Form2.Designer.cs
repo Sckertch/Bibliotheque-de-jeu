@@ -44,7 +44,6 @@
             ListBoxGames.RowHeadersWidth = 51;
             ListBoxGames.Size = new Size(1666, 414);
             ListBoxGames.TabIndex = 0;
-            ListBoxGames.CellContentClick += ListBoxGames_CellContentClick;
             // 
             // recherche
             // 
@@ -93,7 +92,6 @@
             Controls.Add(ListBoxGames);
             Name = "Form2";
             Text = "Form2";
-            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)ListBoxGames).EndInit();
             ResumeLayout(false);
             PerformLayout();

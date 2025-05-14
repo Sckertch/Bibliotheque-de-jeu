@@ -77,7 +77,6 @@
             label1.Size = new Size(89, 20);
             label1.TabIndex = 4;
             label1.Text = "Rechercher :";
-            label1.Click += label1_Click;
             // 
             // recherche
             // 
@@ -119,7 +118,6 @@
             Controls.Add(ListBoxGames);
             Name = "Form3";
             Text = "Form3";
-            Load += Form3_Load;
             ((System.ComponentModel.ISupportInitialize)ListBoxGames).EndInit();
             ResumeLayout(false);
             PerformLayout();

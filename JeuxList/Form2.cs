@@ -44,8 +44,6 @@ namespace JeuxList
             ListBoxGames.Columns["Title"].Width = 250;
             ListBoxGames.Columns["Description"].Width = 450; // Ajustez la largeur selon vos besoins
             ListBoxGames.Columns["CategoryName"].Width = 150;
-
-            ListBoxGames.SelectionChanged += ListBoxGames_SelectionChanged;
         }
 
 
@@ -59,32 +57,6 @@ namespace JeuxList
             // Ajouter les résultats au DataGridView
             foreach (Game game in games)
                 ListBoxGames.Rows.Add(game.Title, game.Description, game.CategoryName, game.Quantity, game.NbJoueur, game.Age, game.Duree + " min", "✏️", game.GameId);
-        }
-
-        private void ListBoxGames_SelectionChanged(object sender, EventArgs e)
-        {
-        }
-        private void addCart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ListBoxGames_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void recherche_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void decon_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void decon_Click_1(object sender, EventArgs e)

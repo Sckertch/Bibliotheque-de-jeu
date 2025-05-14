@@ -41,12 +41,6 @@ namespace JeuxList
             List<string> categories = Game.GetCategories(dbConnection);
             modifCat.DataSource = categories;
         }
-
-        private void EditGameForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEnreg_Click(object sender, EventArgs e)
         {
             string name = modifNom.Text;
@@ -77,11 +71,6 @@ namespace JeuxList
         private void retour_Click(object sender, EventArgs e)
         {
             this.Close(); // Fermer Form3
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
