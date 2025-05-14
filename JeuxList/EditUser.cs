@@ -25,7 +25,6 @@ namespace JeuxList
         {
             userGrid.Columns.Add("UserID", "Id utilisateur");
             userGrid.Columns.Add("Username", "Nom d'utilisateur");
-            userGrid.Columns.Add("Borrow", "Nombre d'emprunt totaux");
             this.btnEdit.Name = "Edit";
             this.btnEdit.HeaderText = "Modifier";
             this.btnEdit.Text = "✏️";
@@ -40,7 +39,7 @@ namespace JeuxList
             List<User> users = User.GetUsers(this.dbConnection);
             userGrid.Rows.Clear();
             foreach (User user in users)
-                userGrid.Rows.Add(user.UserId, user.Nom, user.UserBorrow, "✏️");
+                userGrid.Rows.Add(user.UserId, user.Nom, "✏️");
         }
 
 

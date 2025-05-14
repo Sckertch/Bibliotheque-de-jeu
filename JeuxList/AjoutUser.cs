@@ -49,13 +49,13 @@ namespace JeuxList
             User user = new User(name);
             UserCheck check = new UserCheck();
 
-            if (check.checkUser(user, conn))
+            if (User.CheckUser(user, conn))
             {
                 MessageBox.Show("L'utilisateur existe déjà");
             }
             else
             {
-                if (check.addUser(user, role, this.conn))
+                if (User.AddUser(user, role, this.conn))
                 {
                     MessageBox.Show("Utilisateur ajouté avec succès");
                     this.editUser.LoadDataGridView(this.btnEdit);
