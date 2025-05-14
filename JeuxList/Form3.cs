@@ -16,7 +16,7 @@
             InitializeComponent();
             InitializeDataGridView();
             Connect.Text = "Connecté en tant que " + this.connectUser;
-            
+
 
         }
 
@@ -161,5 +161,9 @@
             useredit.Show();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

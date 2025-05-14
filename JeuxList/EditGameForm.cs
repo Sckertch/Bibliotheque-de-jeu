@@ -60,7 +60,7 @@ namespace JeuxList
 
             Game game = new Game(name, description, categegorie, quantity, nbJoueur, age, duree, id);
 
-            bool success = GameCheck.UpdateGame(game, this.dbConnection); ///
+            bool success = Game.UpdateGame(game, this.dbConnection); ///
 
             if (success)
             {

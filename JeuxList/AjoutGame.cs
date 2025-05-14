@@ -49,11 +49,10 @@ namespace JeuxList
 
             DatabaseConnection conn = new DatabaseConnection();
             Game game = new Game(name, description, categorie, quantity, nbJoueur, age, duree);
-            GameCheck check = new GameCheck();
 
-            if (check.CheckGame(game))
+            if (Game.CheckGame(game))
             {
-                if (GameCheck.AddGame(game, conn))
+                if (Game.AddGame(game, conn))
                 {
                     MessageBox.Show("Jeu ajouté avec succès");
                     this.form3.LoadDataGridView(this.btnEdit);
