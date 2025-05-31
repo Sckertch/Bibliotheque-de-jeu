@@ -12,9 +12,9 @@ namespace JeuxList
 {
     public partial class AjoutGame : Form
     {
-        private Form3 form3;
+        private Admin form3;
         private DataGridViewButtonColumn btnEdit;
-        public AjoutGame(Form3 form3, DataGridViewButtonColumn btnEdit)
+        public AjoutGame(Admin form3, DataGridViewButtonColumn btnEdit)
         {
             this.form3 = form3;
             InitializeComponent();

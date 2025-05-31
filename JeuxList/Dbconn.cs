@@ -1,15 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using DotNetEnv;
 
 namespace JeuxList
 {
     public class DatabaseConnection
     {
-        string connectionString = "Server=localhost;Database=bibliothequejeux;User Id=root;Password=;";
+        private readonly string connectionString;
 
         public DatabaseConnection()
         {
+            // Charge les variables d'environnement depuis le fichier .bdd.env
+            DotNetEnv.Env.Load(".bdd.env");
+
+            string server = Environment.GetEnvironmentVariable("DB_SERVER");
+            string database = Environment.GetEnvironmentVariable("DB_DATABASE");
+            string user = Environment.GetEnvironmentVariable("DB_USER");
+            string password = Environment.GetEnvironmentVariable("DB_PASSWORD");
+
+            connectionString = $"Server={server};Database={database};User Id={user};Password={password};";
         }
 
         public MySqlConnection GetConnection()

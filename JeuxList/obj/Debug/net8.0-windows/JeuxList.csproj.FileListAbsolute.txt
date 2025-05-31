@@ -360,9 +360,6 @@ C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.AjoutUser.resources
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.EditGameForm.resources
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.EditUser.resources
-C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Form1.resources
-C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Form2.resources
-C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Form3.resources
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.PassChange.resources
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.csproj.GenerateResource.cache
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.GeneratedMSBuildEditorConfig.editorconfig
@@ -376,3 +373,10 @@ C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.pdb
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.genruntimeconfig.cache
 C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\ref\JeuxList.dll
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\bin\Debug\net8.0-windows\DotNetEnv.dll
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\bin\Debug\net8.0-windows\Sprache.dll
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Admin.resources
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Connexion.resources
+C:\Users\mleda\source\repos\Sckertch\Bibliotheque-de-jeu\JeuxList\obj\Debug\net8.0-windows\JeuxList.Utilisateur.resources

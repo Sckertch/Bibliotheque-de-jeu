@@ -2,9 +2,9 @@ using MySql.Data.MySqlClient;
 
 namespace JeuxList
 {
-    public partial class Form1 : Form
+    public partial class Connexion : Form
     {
-        public Form1()
+        public Connexion()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace JeuxList
                     this.Hide();
 
                     // Instancier la vue administrateur
-                    Form3 form3 = new Form3(this, result.name, conn);
+                    Admin form3 = new Admin(this, result.name, conn);
 
                     // Afficher le formulaire Form2
                     form3.Show();
@@ -46,7 +46,7 @@ namespace JeuxList
                     break;
                 default:
                     // Instancier la vue utilisateur
-                    Form2 form2 = new Form2(this, result.name, conn);
+                    Utilisateur form2 = new Utilisateur(this, result.name, conn);
                     form2.Show();
 
                     // Cacher le formulaire Form1 au lieu de le fermer
@@ -66,5 +66,6 @@ namespace JeuxList
         {
             this.Close();
         }
+
     }
 }

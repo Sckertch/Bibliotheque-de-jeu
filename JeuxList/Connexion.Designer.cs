@@ -1,6 +1,6 @@
 ﻿namespace JeuxList
 {
-    partial class Form1
+    partial class Connexion
     {
         /// <summary>
         ///  Required designer variable.
@@ -88,7 +88,7 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // Form1
+            // Connexion
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -99,7 +99,7 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "Connexion";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();

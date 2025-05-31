@@ -14,9 +14,9 @@ namespace JeuxList
     {
         private Game selectedGame;
         private DatabaseConnection dbConnection;
-        private Form3 parentForm;
+        private Admin parentForm;
         private DataGridViewButtonColumn btnEdit;
-        public EditGameForm(Game game, DatabaseConnection dbConnection, Form3 parent, DataGridViewButtonColumn btnEdit)
+        public EditGameForm(Game game, DatabaseConnection dbConnection, Admin parent, DataGridViewButtonColumn btnEdit)
         {
             InitializeComponent();
             this.selectedGame = game;

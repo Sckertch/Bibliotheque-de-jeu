@@ -1,14 +1,14 @@
 ﻿namespace JeuxList //vue admin
 {
-    public partial class Form3 : Form
+    public partial class Admin : Form
     {
         private DatabaseConnection dbConnection;
         private DataGridViewButtonColumn btnEdit = new DataGridViewButtonColumn();
-        private Form1 form1;
+        private Connexion form1;
         private string connectUser;
 
 
-        public Form3(Form1 form1, string connectUser, DatabaseConnection dbConnection)
+        public Admin(Connexion form1, string connectUser, DatabaseConnection dbConnection)
         {
             this.form1 = form1;
             this.dbConnection = dbConnection;

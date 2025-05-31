@@ -13,13 +13,13 @@
     <Compile Update="EditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form2.cs">
+    <Compile Update="Utilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form3.cs">
+    <Compile Update="Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PassChange.cs">

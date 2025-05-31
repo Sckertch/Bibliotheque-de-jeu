@@ -4,14 +4,14 @@ using System.Windows.Forms;
 
 namespace JeuxList
 {
-    public partial class Form2 : Form
+    public partial class Utilisateur : Form
     {
         private DatabaseConnection dbConnection;
-        private Form1 form1;
+        private Connexion form1;
         private string connectUser;
 
 
-        public Form2(Form1 form1, string connectUser, DatabaseConnection dbConnection)
+        public Utilisateur(Connexion form1, string connectUser, DatabaseConnection dbConnection)
         {
             ;
             this.form1 = form1;

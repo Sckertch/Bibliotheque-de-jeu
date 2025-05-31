@@ -1,6 +1,6 @@
 ﻿namespace JeuxList
 {
-    partial class Form3
+    partial class Admin
     {
         /// <summary>
         /// Required designer variable.
